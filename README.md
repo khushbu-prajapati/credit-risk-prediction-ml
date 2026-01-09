@@ -74,3 +74,16 @@ credit-risk-prediction-ml/
 │   └── Credit_Risk_Prediction_Production_Pipeline.ipynb
 │
 ├── README.md
+
+---
+## 🔐 Data Access Note
+This project connects to a SQL Server database for data ingestion.
+Due to data privacy and security reasons, the database is not publicly accessible.
+
+To run this project locally, users can:
+- Replace the database connection with their own SQL Server instance, or
+- Modify the data ingestion layer to load data from a CSV file with the same schema.
+
+
+
+----
