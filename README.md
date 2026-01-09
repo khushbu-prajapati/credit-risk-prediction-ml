@@ -76,14 +76,21 @@ credit-risk-prediction-ml/
 ├── README.md
 
 ---
-## 🔐 Data Access Note
-This project connects to a SQL Server database for data ingestion.
-Due to data privacy and security reasons, the database is not publicly accessible.
 
-To run this project locally, users can:
-- Replace the database connection with their own SQL Server instance, or
-- Modify the data ingestion layer to load data from a CSV file with the same schema.
+## 🔐 Data Access & Configuration Note
 
+This project connects to a **SQL Server database** for data ingestion using SQLAlchemy and PyODBC.
 
+Due to **data privacy and security reasons**, the database used in this project is not publicly accessible.
+As a result, external users may not be able to directly run the project without modifying the data source.
 
-----
+### How this project can be reused or adapted:
+- Replace the database connection string with your own **SQL Server instance**, or
+- Modify the data ingestion layer to load data from a **CSV file with the same schema**
+
+The **machine learning pipeline, feature engineering, model training,
+evaluation, and business cost optimization logic** remain fully reusable
+and are designed to be **data-source agnostic**.
+
+This reflects a **real-world industry setup**, where data typically resides
+in secure databases rather than public CSV files.
